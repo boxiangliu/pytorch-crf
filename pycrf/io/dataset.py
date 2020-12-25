@@ -106,6 +106,7 @@ class Dataset(Sized, Iterable):
             for line in datafile.readlines():
                 line_list = line.rstrip().split('\t')
                 if len(line_list) == 1:  # end of sentence.
+                breakpoint()
                     target_tensor = vocab.labs2tensor(tgt, device=device,
                                                       test=test)
                     source_tensor = vocab.sent2tensor(src, device=device,

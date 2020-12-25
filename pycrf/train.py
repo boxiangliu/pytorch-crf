@@ -157,8 +157,6 @@ class Learner:
         self.dataset_train = dataset_train
         self.dataset_valid = dataset_valid
 
-        breakpoint()
-
     def reset_model(self) -> None:
         """Initialize model again to completely reset params."""
         device = get_device(self._opts)
