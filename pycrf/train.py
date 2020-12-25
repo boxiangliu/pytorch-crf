@@ -126,7 +126,6 @@ class Learner:
 
             # Load datasets.
             print("Loading datasets", flush=True)
-            breakpoint()
             for fname in opts.train:
                 context, path = _parse_data_path(fname)
                 dataset_train.load_file(path, vocab, device=device, sent_context=context)
@@ -157,6 +156,8 @@ class Learner:
         self.optimizer_class = optim_class
         self.dataset_train = dataset_train
         self.dataset_valid = dataset_valid
+
+        breakpoint()
 
     def reset_model(self) -> None:
         """Initialize model again to completely reset params."""
