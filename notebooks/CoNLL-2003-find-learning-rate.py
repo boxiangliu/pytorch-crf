@@ -12,8 +12,11 @@ get_ipython().magic(u'matplotlib inline')
 
 import sys; sys.path.append("..")
 import matplotlib.pyplot as plt
-from pycrf.train import Learner
+import importlib
 
+import pycrf.train
+importlib.reload(pycrf.train)
+from pycrf.train import Learner
 
 # In[ ]:
 
