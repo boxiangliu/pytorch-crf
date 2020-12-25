@@ -77,6 +77,8 @@ class Learner:
     """Serves as an interface to the command-line interface."""
 
     def __init__(self, args: List[str] = None) -> None:
+        breakpoint()
+
         initial_opts, parser = get_parser(args, train_opts)
 
         # Add optimizer-specific options.
@@ -176,7 +178,6 @@ class Learner:
     @classmethod
     def build(cls, **options):
         """Initialize a learner object."""
-        breakpoint()
         args: List[str] = []
         for opt_name, opt_value in options.items():
             opt_name = "--" + opt_name.replace("_", "-")
