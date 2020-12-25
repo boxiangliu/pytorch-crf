@@ -21,8 +21,8 @@ from pycrf.train import Learner
 # In[ ]:
 
 
-learner = Learner.build(train="../data/conll2003/train.txt",
-                        validation="../data/conll2003/valid.txt",
+learner = Learner.build(train="../data/conll2003/train.feats.txt",
+                        validation="../data/conll2003/valid.feats.txt",
                         word_vectors="../data/glove.6B.50d.txt",
                         verbose=True,
                         cuda=True)

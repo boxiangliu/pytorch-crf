@@ -77,7 +77,6 @@ class Learner:
     """Serves as an interface to the command-line interface."""
 
     def __init__(self, args: List[str] = None) -> None:
-        breakpoint()
 
         initial_opts, parser = get_parser(args, train_opts)
 
@@ -127,6 +126,7 @@ class Learner:
 
             # Load datasets.
             print("Loading datasets", flush=True)
+            breakpoint()
             for fname in opts.train:
                 context, path = _parse_data_path(fname)
                 dataset_train.load_file(path, vocab, device=device, sent_context=context)
