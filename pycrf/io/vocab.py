@@ -166,6 +166,7 @@ class Vocab:
 
         """
         # Encode sentence-level context.
+        breakpoint()
         if sent_context is not None:
             if test:
                 context_i = self.sent_context_stoi.get(sent_context, 0)
