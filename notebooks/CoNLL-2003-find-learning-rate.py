@@ -41,4 +41,5 @@ fig, ax = plt.subplots()
 ax.set_xscale('log')
 ax.plot(lrs, losses)
 ax.grid()
+plt.savefig("lr_vs_loss.png")
 
