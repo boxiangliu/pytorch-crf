@@ -120,7 +120,7 @@ class CharLSTM(nn.Module):
         # inputs_emb: ``[sent_length x max_word_length x embedding_size]``
 
         # Turned the padded inputs into a packed sequence.
-        packed = pack_padded_sequence(inputs_emb, lengths, batch_first=True)
+        packed = pack_padded_sequence(inputs_emb, lengths.cpu(), batch_first=True)
 
         _, state = self.rnn(packed)
         hidden = state[0]
