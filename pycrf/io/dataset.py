@@ -101,7 +101,6 @@ class Dataset(Sized, Iterable):
 
         """
         with open(fname, "r") as datafile:
-            breakpoint()
             src: List[str] = []
             tgt: List[str] = []
             for line in datafile.readlines():
