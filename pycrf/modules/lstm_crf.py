@@ -98,7 +98,7 @@ class LSTMCRF(nn.Module):
                  bidirectional: bool = True,
                  freeze_embeddings: bool = True) -> None:
         super(LSTMCRF, self).__init__()
-
+        breakpoint()
         assert vocab.n_chars == char_feats_layer.n_chars
         assert vocab.n_labels == crf.num_tags
         assert vocab.n_words == pretrained_word_vecs.size()[0]
