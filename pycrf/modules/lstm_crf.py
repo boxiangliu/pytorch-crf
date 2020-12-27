@@ -221,6 +221,7 @@ class LSTMCRF(nn.Module):
             ``[batch_size x sent_length x crf.n_labels]``
 
         """
+        breakpoint()
         sent_length = words.size(0)
 
         # Run each word character-by-character through the CharLSTM to generate

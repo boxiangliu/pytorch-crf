@@ -113,7 +113,6 @@ class CharLSTM(nn.Module):
             ``[len(inputs) x (layers * directions * hidden_size)]``
 
         """
-        breakpoint()
         sent_length = inputs.size()[0]
 
         # Pass inputs through embedding layer.
