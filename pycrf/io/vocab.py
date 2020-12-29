@@ -91,6 +91,7 @@ class Vocab:
                  unk_term: str = "UNK",
                  pad_char: str = "PAD",
                  unk_char: str = "UNK") -> None:
+        breakpoint()
         self.default_label = default_label
         self.labels_stoi = {default_label: 0}
         self.labels_itos = {0: default_label}
