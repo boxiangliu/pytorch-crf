@@ -236,6 +236,7 @@ class Vocab:
             The tensor of integers corresponding to the list of labels.
 
         """
+        breakpoint()
         lab_ids = []
         for lab in labs:
             if test:
